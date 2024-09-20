@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import michael from "@assets/img/michael-scott.jpg";
+---
+
+<div
+  class="bg-black p-8 md:px-20 md:py-20 mt-10 mx-auto max-w-5xl rounded-lg flex flex-row items-center mb-10">
+  <div class="pr-5">
+    <Image src={michael} alt="my picture" width="300" class="object-scale-down h-48 w-96">
+  </div>
+  <div class="flex-col w-2/3">
+    <h2 class="text-white text-4xl md:text-4xl tracking-tight">
+      ¡Hola!
+    </h2>
+  
+    <p class="text-slate-400 mt-4 text-sm font-light">
+      Mi nombre es Agustina, tengo 26 años y vivo en Buenos Aires, Argentina.
+      Estudi&eacute; diseño multimedial, una carrera que me permiti&oacute; 
+      conocer distintos lenguajes, herramientas y formas de <span class="font-bold">relacionar cosas muy diversas entre s&iacute.</span><br><br>
+      Me interesan los proyectos relacionados a <span class="font-bold">educaci&oacute;n, medio ambiente, ilustraci&oacute;n y desarrollo de identidad.</span>
+    </p>
+  
+    <div class="py-5 flex justify-between">
+      <span class="text-white text-xs">mail | agustinagarciavega@gmail.com</span>
+      <span class="text-white text-xs">behance | Agustina Garcia Vega</span>
+    </div>
+  </div>
+  
+</div>

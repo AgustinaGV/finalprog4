@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import Link from "./ui/link.astro";
+import michael from "@assets/img/michael-scott.jpg";
+
+const features = [
+  {
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    category:'Programación',
+  },
+  {
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      category:"Diseño",
+  },
+  {
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      category:"Branding",
+      
+  },
+];
+---
+
+<div
+  class="bg-slate-200 p-8 md:px-20 md:py-20 mt-10 mx-auto max-w-5xl rounded-lg flex-col items-center mb-10 text-center">
+    <div class="mt-16 md:mt-0">
+        <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        Proyectos
+        </h2>
+        <p class="text-lg mt-4 text-slate-600">
+        Mis proyectos favoritos o elecciones random para lograr este maquetado.
+        </p>
+    </div>
+
+  <div class="">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-5 gap-2 place-content-center">
+        {
+          features.map((item) => (
+            <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-2 shadow-lg">
+                <span class="inline-flex items-center rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{item.category}</span>
+                <div class="p-0 m-0">
+                    <Image src={michael} alt="my picture" width="300" class="object-scale-down h-48 w-96"></Image>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg">{item.category}</h3>{" "}
+                    <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+                </div>
+            </div>
+          ))
+        }
+      </div>  
+    </div>
+
+    <div class="mt-20 ">
+        <Link href="/proyects" style="inverted" class="hover:bg-indigo-200">Ver m&aacute;s</Link>
+    </div>
+
+</div>
+

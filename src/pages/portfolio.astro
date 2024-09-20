@@ -1,0 +1,154 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import ProyectCard from "@components/proyects.astro";
+
+const portfolio = [
+  {
+    category: "Proyecto 1",
+    proyectTitle: "Free",
+    popular: false, /*hace que el btn este en outline o negro */
+    features: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ornare ut quam nec sodales. Fusce eu pulvinar felis, venenatis cursus nunc. Ut vel elementum diam, eget volutpat lectus.",
+      "Astro Sub domain",
+    ],
+    button: {
+      text: "Ver más",
+      link: "/",
+    },
+    image: {
+      src: '/src/assets/img/tatu-carreta.png',
+      alt: "Tatu carreta"
+    },
+  },
+  {
+    category: "Startup",
+    proyectTitle: "$24",
+    popular: true,
+    features: [
+      "All Free Features",
+      "Up to 20 users",
+      "20 Custom domains",
+    ],
+    button: {
+      text: "Ver más",
+      link: "#",
+    },
+    image: {
+      src: '/src/assets/img/tatu-carreta.png',
+      alt: "Tatu carreta"
+    },
+  },
+  {
+    category: "Enterprise",
+    proyectTitle: "Custom",
+    popular: false,
+    features: [
+      "All Pro Features",
+      "Unlimited Custom domains",
+      "99.99% Uptime SLA",
+      "24/7 Phone Support",
+    ],
+    button: {
+      text: "Ver más",
+      link: "/contact",
+    },
+    image: {
+      src: '/src/assets/img/tatu-carreta.png',
+      alt: "Tatu carreta"
+    },
+  },
+  {
+    category: "Startup",
+    proyectTitle: "Custom",
+    popular: true,
+    features: [
+      "All Free Features",
+      "Up to 20 users",
+      "20 Custom domains",
+      "Priority Support",
+    ],
+    button: {
+      text: "Ver más",
+      link: "#",
+    },
+    image: {
+      src: '/src/assets/img/tatu-carreta.png',
+      alt: "Tatu carreta"
+    },
+  },
+  {
+    category: "Startup",
+    proyectTitle: "Custom",
+    popular: true,
+    features: [
+      "All Free Features",
+      "Up to 20 users",
+      "20 Custom domains",
+      "Unlimited Collaborators",
+    ],
+    button: {
+      text: "Ver más",
+      link: "#",
+    },
+    image: {
+      src: '/src/assets/img/tatu-carreta.png',
+      alt: "Tatu carreta"
+    },
+  },
+  {
+    category: "Startup",
+    proyectTitle: "Custom",
+    popular: true,
+    features: [
+      "All Free Features",
+      "Unlimited Collaborators",
+      "Advanced Integrations",
+      "Priority Support",
+    ],
+    button: {
+      text: "Ver más",
+      link: "#",
+    },
+    image: {
+      src: '/src/assets/img/tatu-carreta.png',
+      alt: "Tatu carreta"
+    },
+  },
+  {
+    category: "Startup",
+    proyectTitle: "Custom",
+    popular: true,
+    features: [
+      "All Free Features",
+      "Up to 20 users",
+      "Advanced Integrations",
+      "Priority Support",
+    ],
+    button: {
+      text: "Ver más",
+      link: "#",
+    },
+    image: {
+      src: '',
+      alt: "Yaguarete"
+    },
+  },
+];
+---
+
+<Layout title="Proyectos">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Portfolio</Fragment>
+      <Fragment slot="desc">
+        Mi portfolio
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid xl:grid-cols-4 gap-5 mx-auto max-w-screen-xl mt-12">
+      {portfolio.map((item) => <ProyectCard proyect={item} />)}
+    </div>
+  </Container>
+</Layout>

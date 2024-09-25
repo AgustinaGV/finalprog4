@@ -14,7 +14,7 @@ import random from "@assets/img/random.jpg";
   <Container>
     <Sectionhead>
       <Fragment slot="title">¡Hablemos!</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="desc">Propuestas laborales, consultas o comentarios</Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
@@ -22,20 +22,24 @@ import random from "@assets/img/random.jpg";
         <h2 class="font-medium text-2xl text-gray-800">Pod&eacute;s encontrarme en</h2>
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>Buenos Aires, Argentina</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
-            <span>agustinagarciavega@gmail.com</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
-            <span>(+54) 11-1111-1111</span>
+            <!--<Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />-->
+            <span class="font-bold">instagram</span><span>| @agustinagarciavega</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <!--<Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />-->
+            <span class="font-bold">mail </span><span>| agustinagarciavega@gmail.com</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <!--<Icon class="text-gray-400 w-4 h-4" name="uil:phone" /> -->
+            <a href="https://www.behance.net/agustinagarciavega"><span class="font-bold">behance</span> <span>| agustinagarciavega</span></a>
           </div>
         </div>
       </div>
+
       <div>
         <Image src={random} alt="my picture" width="300" class="object-scale-down"></Image>
       </div>
     </div>
+
   </Container>
 </Layout>

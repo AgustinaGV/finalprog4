@@ -4,15 +4,16 @@ import { Image } from "astro:assets";
 import Link from "./ui/link.astro";
 
 
-
 // Filter blog entries with 'draft: false' & date before current date
 const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
 });
 
-console.log(publishedBlogEntries);
+//console.log(publishedBlogEntries);
+
 
 ---
+
 
 <div
   class="bg-slate-200 p-8 md:px-20 md:py-20 mt-10 mx-auto max-w-5xl rounded-lg flex-col items-center mb-10 text-center">
@@ -29,10 +30,10 @@ console.log(publishedBlogEntries);
     <div class="">
       <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-5 gap-2 place-content-center">
         {
-          publishedBlogEntries .map((blogPostEntry, index) => (
+          publishedBlogEntries.map((blogPostEntry, index) => (
           <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-2 shadow-lg">
               <a href={`/blog/${blogPostEntry.slug}`}>
-                <span class="inline-flex items-center rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
+                <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
                 <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
                   <div class="p-0 m-0">
                     <Image src={blogPostEntry.data.image.src} alt="my picture" width="300" height="300" class="object-scale-down h-48 w-96"></Image>
@@ -51,9 +52,10 @@ console.log(publishedBlogEntries);
       </div>  
     </div>
 
-    <div class="mt-20 ">
+    <div class="mt-20 mb-10">
       <Link href="/blog" style="inverted" class="hover:bg-indigo-200">Ver m&aacute;s</Link>
-  </div>
+    </div>
+
 
 
 </div>

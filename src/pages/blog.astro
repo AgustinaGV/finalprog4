@@ -42,7 +42,7 @@ publishedBlogEntries .sort(function (a, b) {
                     class="w-full rounded-md object-cover object-center bg-white"
                   />
                   <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                    <span class="uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">
                       {blogPostEntry.data.category}
                     </span>
 
@@ -58,7 +58,9 @@ publishedBlogEntries .sort(function (a, b) {
                       <time
                         class="text-gray-400"
                         datetime={blogPostEntry.data.publishDate.toISOString()}>
-                        {blogPostEntry.data.publishDate.toDateString()}
+                      {blogPostEntry.data.publishDate.getDate()}.
+                      {blogPostEntry.data.publishDate.getMonth()}.
+                      {blogPostEntry.data.publishDate.getFullYear()}
                       </time>
                     </div>
                   </div>

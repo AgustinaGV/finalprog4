@@ -26,14 +26,19 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <Image src={random} alt="my picture" width="500" class="object-scale-down m-auto"></Image>
 
       <p class="text-lg leading-relaxed text-slate-500">
-        Me form&eacute; en Bellas Artes. En la universidad, estudi&eacute; tecnolog&iacute;a multimedial en la Universidad Maim&oacute;nides. 
-        Ah&iacute;, mis materias favoritas fueron X, X y X. 
-        Actualmente, me gusta.
+        Me form&eacute; en Bellas Artes desde muy chica, donde pude aprender y trabajar en distintos soportes como grabado, dibujo y escultura. Al ver que el enorme potencial del mundo digital, decid&iacute; buscar formas de <span class="font-bold">unir mis conocimientos anal&oacute;gicos art&iacute;sticos con nuevos formatos</span>.<br><br>
+        Estudi&eacute; Tecnolog&iacute;a Multimedial en la Universidad Maim&oacute;nides. Durante mis años de formaci&oacute;n, conoc&iacute; <span class="font-bold">nuevos soportes, lenguajes y formas de conectar mundos diferentes entre s&iacute;</span>. Esta formaci&oacute;n y mi experiencia laboral me permiten poder trabajar en equipos multidisciplinarios, conociendo distintos flujos y procesos de trabajo.
+
       </p>
       
-      <p class="text-center mt-10 mb-10 text-5xl">Palabra <br/>Palabra <br/> Palabra</p>
+      <span class="text-center mt-1 text-5xl">Conocer </span>
+      <span class="text-center mt-1 text-5xl">Experimentar </span>
+      <span class="text-center mt-1 mb-10 text-5xl">Compartir</span>
 
-      <p class="text-lg leading-relaxed text-slate-500">Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.</p>
+      <p class="text-lg leading-relaxed text-slate-500">Me interesan especialmente los proyectos relacionados a <span class="font-bold">educación, medio ambiente y accesibilidad</span>.<br><br>
+      Tengo experiencia en creaci&oacute;n y gestión de contenidos, ilustraci&oacute;n, modelado 3D y acompañamiento en proyectos / branding.<br><br>
+      Me encanta leer, ver pel&iacute;culas, pasar tiempo con amigxs al aire libre, dibujar y estar con mis gatos 🐱
+      </p>
 
       <div class="mt-20 text-center">
         <Link href="/blog" class="hover:bg-indigo-200">Ver proyectos</Link>
@@ -43,34 +48,6 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
 
     </div>
-
-    <!-- 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                width={400}
-                height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-    -->
 
   </Container>
 </Layout>

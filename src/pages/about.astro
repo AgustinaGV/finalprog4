@@ -7,6 +7,7 @@ import Sectionhead from "@components/sectionhead.astro";
 import { Image } from "astro:assets";
 import random from "@assets/img/random.jpg";
 import Link from "@components/ui/link.astro";
+import Gatxs from "@assets/img/gatxs-portfolio.gif"
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -40,11 +41,12 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       Me encanta leer, ver pel&iacute;culas, pasar tiempo con amigxs al aire libre, dibujar y estar con mis gatos 🐱
       </p>
 
+      <Image src={Gatxs} alt="my picture" width="800" class="object-scale-down m-auto"></Image>
+
       <div class="mt-20 text-center">
         <Link href="/blog" class="hover:bg-indigo-200">Ver proyectos</Link>
       </div>
 
-      
 
 
     </div>

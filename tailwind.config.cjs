@@ -12,7 +12,8 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
       },
+      
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require('tailwindcss-motion')],
 };

@@ -8,11 +8,14 @@ import Layout from "@layouts/Layout.astro";
 import Areas from "@components/areas.astro";
 import AboutCard from '@components/aboutcard.astro';
 import ProyectsCard from '@components/proyectscard.astro';
+import CarouselProyects from "@components/carousel-proyects.astro";
+ 
 
 ---
 
 <Layout title="Home">
   <Container>    
+    <CarouselProyects/>
     <Hero />
     <Areas />
     <AboutCard />

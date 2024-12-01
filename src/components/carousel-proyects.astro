@@ -1,5 +1,4 @@
 ---
-
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import Link from "./ui/link.astro";
@@ -14,47 +13,64 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 
 ---
 
-<div>
-    
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper pb-10">
-        <!-- Slides -->
-        {
-            publishedBlogEntries.map((blogPostEntry, index) => (
-            <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-2 shadow-lg swiper-slide">
-                <a href={`/blog/${blogPostEntry.slug}`}>
-                  <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
-                  <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
-                    <div class="p-0 m-0">
-                      <Image src={blogPostEntry.data.image.src} alt="my picture" width="300" height="300" class="object-scale-down h-48 w-96"></Image>
-                  </div>
-  
-                  <div>
-                      <h3 class="font-semibold text-lg">{blogPostEntry.data.title}</h3>{" "}
-                      <p class="text-slate-500 mt-2 leading-relaxed">{blogPostEntry.data.summary}</p>
-                  </div>
-                    
-                  </div>
-                </a>
-              </div>
-            ))
-          }
+<div class="mt-10 py-10 bg-slate-200 rounded-lg flex-col items-center text-center">
 
+  <div class="mt-16 md:mt-0">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Proyectos
+    </h2>
+  </div>
+
+  <div class="">
+      
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper pb-10">
+          <!-- Slides -->
+          {
+              publishedBlogEntries.map((blogPostEntry, index) => (
+              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-2 shadow-lg swiper-slide px-10">
+                  <a href={`/blog/${blogPostEntry.slug}`}>
+                    <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
+                    <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
+                      <div class="p-0 m-0">
+                        <Image src={blogPostEntry.data.image.src} alt="my picture" width="300" height="300" class="object-scale-down h-48 w-96"></Image>
+                    </div>
+    
+                    <div>
+                        <h3 class="font-semibold text-lg">{blogPostEntry.data.title}</h3>{" "}
+                        <p class="text-slate-500 mt-2 leading-relaxed">{blogPostEntry.data.summary}</p>
+                    </div>
+                      
+                    </div>
+                  </a>
+                </div>
+              ))
+            }
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+
+      
+  </div>
+
+  <div class="mt-10">
+    <Link href="/blog" style="inverted" class="hover:bg-indigo-200">Ver m&aacute;s</Link>
+  </div>
     
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
-    </div>
-    
+</div>
+
+<!-- STYLES CAROUSEL - neccesary move to an css file  -->
     <style is:global>
       .swiper-slide {
         height: 400px;
@@ -71,7 +87,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 
     </style>
     
-    
+<!-- JS CAROUSEL - neccesary move to an js file  -->    
     <script>
       import Swiper from 'swiper/bundle';
     

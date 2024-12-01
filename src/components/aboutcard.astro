@@ -5,30 +5,25 @@ import michael from "@assets/img/michael-scott.jpg";
 import Link from "./ui/link.astro";
 ---
 
-<div class="bg-black p-8 md:px-20 md:py-20 mt-10 mx-auto max-w-5xl rounded-lg items-center">
-  <div
-  class="flex flex-row mb-10">
-    <div class="pr-5">
-      <Image src={michael} alt="my picture" width="300" class="object-scale-down h-480">
+<div class="bg-black p-10 md:px-10 md:py-10 mt-5 mx-auto max-w-5xl rounded-lg">
+  
+  <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl my-10 items-center text-center">
+
+    <div class="">
+      <Image src={michael} alt="my picture" width="400" class="object-scale-down h-480">
     </div>
-    <div class="flex-col w-2/3">
+
+    <div class="flex-col place-content-center items-center">
       <h2 class="text-white text-4xl md:text-4xl tracking-tight">
         ¡Hola!
       </h2>
     
-
       <p class="text-slate-400 mt-4 text-sm font-light">
         Mi nombre es Agustina, tengo 27 años y vivo en Buenos Aires, Argentina.
         Estudi&eacute; diseño multimedial, una carrera que me permiti&oacute; conocer <span class="font-bold">distintos lenguajes, herramientas y formas de relacionar cosas muy diversas entre s&iacute;.</span><br><br>
         Actualmente, trabajo en gesti&oacute;n y creaci&oacute;n de contenidos institucionales, en articulaci&oacute;n con un equipo multidisciplinario.
         Me interesan especialmente proyectos relacionados a <span class="font-bold">educaci&oacute;n, medio ambiente, ilustraci&oacute;n y desarrollo de identidad.</span>
       </p>
-    
-      <div class="py-5 flex flex-col justify-between lg:flex-row">
-        <span class="text-white text-xs"><span class="font-bold">mail</span> | agustinagarciavega@gmail.com</span>
-        <span class="text-white text-xs"><span class="font-bold">behance</span> | Agustina Garcia Vega</span>
-      </div>
-      
     </div>
 
   </div>

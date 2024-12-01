@@ -15,7 +15,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 
 <div class="mt-10 py-10 bg-slate-200 rounded-lg flex-col items-center text-center">
 
-  <div class="mt-16 md:mt-0">
+  <div class="mt-16 md:mt-0 mb-10">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Proyectos
     </h2>
@@ -30,12 +30,12 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
           <!-- Slides -->
           {
               publishedBlogEntries.map((blogPostEntry, index) => (
-              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-2 shadow-lg swiper-slide px-10">
+              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-4 shadow-lg swiper-slide md:ml-5 min-h-32">
                   <a href={`/blog/${blogPostEntry.slug}`}>
                     <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
                     <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
                       <div class="p-0 m-0">
-                        <Image src={blogPostEntry.data.image.src} alt="my picture" width="300" height="300" class="object-scale-down h-48 w-96"></Image>
+                        <Image src={blogPostEntry.data.image.src} alt="my picture" width="200" height="200" class="object-scale-down h-48 w-96"></Image>
                     </div>
     
                     <div>
@@ -65,7 +65,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
   </div>
 
   <div class="mt-10">
-    <Link href="/blog" style="inverted" class="hover:bg-indigo-200">Ver m&aacute;s</Link>
+    <Link href="/blog" style="inverted" class="hover:bg-indigo-200">Ver todos los proyectoss</Link>
   </div>
     
 </div>

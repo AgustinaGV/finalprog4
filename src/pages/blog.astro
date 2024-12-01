@@ -25,12 +25,12 @@ publishedBlogEntries .sort(function (a, b) {
       </Fragment>
     </Sectionhead>
     <main class="mt-16">
-      <ul class="grid lg:grid-cols-2 gap-8 max-w-screen-lg-4xl mx-auto">
+      <ul class="grid lg:grid-cols-2 gap-8 max-w-screen-lg-4xl mx-auto ">
         {
           publishedBlogEntries .map((blogPostEntry, index) => (
             <li>
               <a href={`/blog/${blogPostEntry.slug}`}>
-                <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
+                <div class="grid gap-5 md:gap-10 items-center rounded-md p-2 border-solid border-2 shadow-lg swiper-slide ">
                   <Picture
                     src={blogPostEntry.data.image.src}
                     alt={blogPostEntry.data.image.alt}
@@ -42,9 +42,15 @@ publishedBlogEntries .sort(function (a, b) {
                     class="w-full rounded-md object-cover object-center bg-white"
                   />
                   <div>
+
                     <span class="uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">
                       {blogPostEntry.data.category}
                     </span>
+
+                    <time class="text-gray-400 block pt-1"
+                      datetime={blogPostEntry.data.publishDate.toISOString()}>
+                      {blogPostEntry.data.publishDate.getDate()}/{blogPostEntry.data.publishDate.getMonth()}/{blogPostEntry.data.publishDate.getFullYear()}
+                    </time>
 
                     <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1">
                       {blogPostEntry.data.title}
@@ -52,16 +58,9 @@ publishedBlogEntries .sort(function (a, b) {
 
                     <div class="flex gap-2 mt-3">
                       <span class="text-gray-400">
-                        {blogPostEntry.data.summary}
+                      {blogPostEntry.data.summary}
                       </span>
-                      <span class="text-gray-400">• </span>
-                      <time
-                        class="text-gray-400"
-                        datetime={blogPostEntry.data.publishDate.toISOString()}>
-                      {blogPostEntry.data.publishDate.getDate()}.
-                      {blogPostEntry.data.publishDate.getMonth()}.
-                      {blogPostEntry.data.publishDate.getFullYear()}
-                      </time>
+                        
                     </div>
                   </div>
                 </div>

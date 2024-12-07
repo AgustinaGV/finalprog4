@@ -13,7 +13,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 
 ---
 
-<div class="mt-10 py-10 bg-slate-200 rounded-lg flex-col items-center text-center">
+<div class="mt-10 py-10 bg-slate-200 rounded-lg flex-col items-center text-center max-w-full">
 
   <div class="mt-16 md:mt-0 mb-10">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
@@ -30,7 +30,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
           <!-- Slides -->
           {
               publishedBlogEntries.map((blogPostEntry, index) => (
-              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-4 shadow-lg swiper-slide md:ml-5 min-h-32">
+              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-4 shadow-lg swiper-slide md:ml-5 min-h-40">
                   <a href={`/blog/${blogPostEntry.slug}`}>
                     <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
                     <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">

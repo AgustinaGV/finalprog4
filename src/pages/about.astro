@@ -8,6 +8,9 @@ import { Image } from "astro:assets";
 import random from "@assets/img/random.jpg";
 import Link from "@components/ui/link.astro";
 import Gatxs from "@assets/img/gatxs-portfolio.gif"
+import Prueba from "@assets/img/prueba1.gif"
+import Prueba2 from "@assets/img/fanzine.gif"
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -24,7 +27,8 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
 
-      <Image src={random} alt="my picture" width="500" class="object-scale-down m-auto"></Image>
+      <Image src={Prueba2} alt="Armando fanzine 2" height="600" class="object-scale-down m-auto"></Image>
+      
 
       <p class="text-lg leading-relaxed text-slate-500">
         Me form&eacute; en Bellas Artes desde muy chica, donde pude aprender y trabajar en distintos soportes como grabado, dibujo y escultura. Al ver que el enorme potencial del mundo digital, decid&iacute; buscar formas de <span class="font-bold">unir mis conocimientos anal&oacute;gicos art&iacute;sticos con nuevos formatos</span>.<br><br>

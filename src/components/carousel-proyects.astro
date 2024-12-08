@@ -12,8 +12,8 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 //console.log(publishedBlogEntries);
 
 ---
-
-<div class="mt-10 py-10 bg-slate-200 rounded-lg flex-col items-center text-center max-w-full">
+<div class="relative">
+<div class="mt-10 py-10 bg-slate-200 rounded-lg flex-col items-center text-center w-11/12 inset-x-0 m-auto">
 
   <div class="mt-16 md:mt-0 mb-10">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
@@ -26,7 +26,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
       <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper pb-10">
+        <div class="swiper-wrapper pb-10 lg:pb-20">
           <!-- Slides -->
           {
               publishedBlogEntries.map((blogPostEntry, index) => (
@@ -34,7 +34,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
                   <a href={`/blog/${blogPostEntry.slug}`}>
                     <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
                     <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
-                      <div class="p-0 m-0">
+                      <div class="p-0 m-auto">
                         <Image src={blogPostEntry.data.image.src} alt="my picture" width="200" height="200" class="object-scale-down h-48 w-96"></Image>
                     </div>
     
@@ -54,8 +54,8 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
         <div class="swiper-pagination"></div>
       
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev bg-slate-100 py-8 px-5 rounded-xl"></div>
+        <div class="swiper-button-next bg-slate-100 py-8 px-5 rounded-xl"></div>
       
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
@@ -65,9 +65,11 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
   </div>
 
   <div class="mt-10">
-    <Link href="/blog" style="inverted" class="hover:bg-indigo-200">Ver todos los proyectoss</Link>
+    <Link href="/blog" style="inverted" class="hover:bg-indigo-200">Ver todos los proyectos</Link>
   </div>
     
+</div>
+
 </div>
 
 <!-- STYLES CAROUSEL - neccesary move to an css file  -->

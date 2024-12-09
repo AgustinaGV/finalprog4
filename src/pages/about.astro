@@ -18,25 +18,27 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 
-<Layout title="About">
+<Layout title="Sobre mí">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Sobre m&iacute; / About </Fragment>
-      <Fragment slot="desc">Formación, proyectos, intereses, deseos.</Fragment>
+      <Fragment slot="title">Sobre m&iacute;</Fragment>
+      <Fragment slot="desc">Formación, proyectos, intereses, deseos</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
 
-      <Image src={Prueba2} alt="Armando fanzine 2" height="600" class="object-scale-down m-auto"></Image>
+      <div class="grid md:grid-cols-2">
+        <Image src={Prueba2} alt="Armando fanzine 2" height="600" class="object-scale-down m-auto"></Image>
       
-
-      <p class="text-lg leading-relaxed text-slate-500">
+        <p class="text-lg leading-relaxed text-slate-500 pt-10 md:pt-20 lg:pt-20">
         Me form&eacute; en Bellas Artes desde muy chica, donde pude aprender y trabajar en distintos soportes como grabado, dibujo y escultura. Al ver que el enorme potencial del mundo digital, decid&iacute; buscar formas de <span class="font-bold">unir mis conocimientos anal&oacute;gicos art&iacute;sticos con nuevos formatos</span>.<br><br>
         Estudi&eacute; Tecnolog&iacute;a Multimedial en la Universidad Maim&oacute;nides. Durante mis años de formaci&oacute;n, conoc&iacute; <span class="font-bold">nuevos soportes, lenguajes y formas de conectar mundos diferentes entre s&iacute;</span>. Esta formaci&oacute;n y mi experiencia laboral me permiten poder trabajar en equipos multidisciplinarios, conociendo distintos flujos y procesos de trabajo.
+        </p>
 
-      </p>
+      </div>
       
-      <span class="text-center mt-1 text-5xl">Conocer </span>
+      
+      <span class="text-center mt-5 text-5xl">Conocer </span>
       <span class="text-center mt-1 text-5xl">Experimentar </span>
       <span class="text-center mt-1 mb-10 text-5xl">Compartir</span>
 
@@ -49,18 +51,14 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <Image src={Gatxs} alt="my picture" width="800" class="object-scale-down m-auto"></Image>
 
       <p class="text-lg leading-relaxed text-slate-500">
-        Si clickeas en el bot&oacute;n que est&aacute; debajo, vas a poder ver algunos de los proyectos que realic&eacute; durante mi formaci&oacute;n universitaria.
-      </p>
-      <br/>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Y si querés ponerte en contacto conmigo por consultas, trabajos o sugerencias, podes escribirme a <span class="font-bold">agustinagarciavega@gmail.com</span>.
+        Clickeando en el bot&oacute;n que est&aacute; debajo vas a poder ver algunos de los proyectos que realic&eacute; durante mi formaci&oacute;n universitaria. Y si querés ponerte en contacto conmigo por <span class="font-semibold">consultas, trabajos o sugerencias</span>, podes escribirme a <span class="font-bold">agustinagarciavega@gmail.com</span>.
       </p>
 
-      <div class="mt-5 text-center">
+      <div class="mt-10 text-center">
         <Link href="/blog" class="hover:bg-indigo-200">Ver proyectos</Link>
       </div>
 
-      <p class="text-2xl leading-relaxed text-slate-500 text-center mt-20"> Gracias por ver / Thanks for watching :) </p>
+      <p class="text-2xl leading-relaxed text-slate-500 text-center mt-10 pb-20"> Gracias por ver / Thanks for watching :) </p>
 
     </div>
 

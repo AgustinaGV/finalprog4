@@ -3,7 +3,7 @@ import Contactform from "@components/contactform.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
-import { Icon } from "astro-icon/components";
+import Link from "@components/ui/link.astro";
 
 import { Image } from "astro:assets";
 import random from "@assets/img/random.jpg";
@@ -23,15 +23,15 @@ import random from "@assets/img/random.jpg";
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600 place-content-center">
             <!--<Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />-->
-            <span class="font-bold">instagram</span><span>| @agustinagarciavega</span>
+            <a href="https://www.instagram.com/agustinagarciavega/" target="_blank" class="hover:text-blue-400"><span class="font-bold">instagram </span><span>| @agustinagarciavega</span></a>
           </div>
-          <div class="flex items-center mt-2 space-x-2 text-gray-600 place-content-center">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 place-content-center hover:text-blue-400">
             <!--<Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />-->
-            <span class="font-bold">mail </span><span>| agustinagarciavega@gmail.com</span>
+            <span class="font-bold ">mail </span><span>| agustinagarciavega@gmail.com</span>
           </div>
           <div class="flex items-center mt-2 space-x-2 text-gray-600 place-content-center">
             <!--<Icon class="text-gray-400 w-4 h-4" name="uil:phone" /> -->
-            <a href="https://www.behance.net/agustinagarciavega"><span class="font-bold">behance</span> <span>| Agustina Garcia Vega</span></a>
+            <a href="https://www.behance.net/agustinagarciavega" target="_blank" class="hover:text-blue-400"><span class="font-bold">behance</span> <span>| Agustina Garcia Vega</span></a>
           </div>
         </div>
       </div>

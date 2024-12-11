@@ -10,16 +10,16 @@ import { Icon } from "astro-icon/components";
   <div class="pb-6  md:block">
     <Image src={yaguareteHeader} alt="header-portfolio2024" width="900"/>
   </div>
-  <div class="flex items-center">
+  <div class="flex items-center flex-col text-center md:flex-row lg:flex-row">
     <div>
       <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">¡Hola! <br>Soy Agustina.</h1>
     </div>
-    <div class="pl-10">
+    <div class="md:pl-10 lg:pl-10">
       <p class="text-xl mt-6 text-slate-600 max-w-xl">
         Tengo 27 años y vivo en Buenos Aires, Argentina.<br>Soy diseñadora multimedial, trabajando actualmente en la <span class="font-bold">creación y gestión de contenidos institucionales</span>.
         
       </p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 mx-8 text-center md:block lg:block">
         <Link
           href="#"
           href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
@@ -27,7 +27,6 @@ import { Icon } from "astro-icon/components";
           class="flex gap-1 items-center justify-center"
           rel="noopener">
           <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-  
            Descarg&aacute; mi curr&iacute;culum :)
         </Link>
       </div>

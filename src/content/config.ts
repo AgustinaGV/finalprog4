@@ -16,6 +16,7 @@ const blogCollection = defineCollection({
     category: z.string(),
     tags: z.array(z.string()),
     summary: z.string(),
+    url:z.string(),
   }),
 });
 

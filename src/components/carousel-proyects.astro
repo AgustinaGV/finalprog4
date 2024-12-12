@@ -30,10 +30,10 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
           <!-- Slides -->
           {
               publishedBlogEntries.map((blogPostEntry, index) => (
-              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-4 shadow-lg swiper-slide md:ml-5 min-h-40">
+              <div class="gap-4 items-start border-solid border-2 hover:border-indigo-200 rounded p-5 shadow-lg swiper-slide md:ml-5 min-h-[430px] ">
                   <a href={`/blog/${blogPostEntry.slug}`}>
                     <span class="inline-flex items-center uppercase rounded-md bg-purple-200 px-2 py-1 text-xs font-medium text-purple-700 mt-2">{blogPostEntry.data.category}</span>
-                    <div class="grid gap-5 md:gap-10 items-center rounded-md p-1.5">
+                    <div class="grid gap-2.5 md:gap-10 items-center rounded-md p-1.5">
                       <div class="p-0 m-auto">
                         <Image src={blogPostEntry.data.image.src} alt="my picture" width="200" height="200" class="object-scale-down h-48 w-96 rounded-2xl"></Image>
                     </div>
@@ -72,7 +72,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 
 </div>
 
-<!-- STYLES CAROUSEL - neccesary move to an css file  -->
+<!-- STYLES CAROUSEL  -->
     <style is:global>
       .swiper-slide {
         height: 400px;
@@ -89,7 +89,7 @@ const publishedBlogEntries  = await getCollection("blog", ({ data }) => {
 
     </style>
     
-<!-- JS CAROUSEL - neccesary move to an js file  -->    
+<!-- JS CAROUSEL  -->    
     <script>
       import Swiper from 'swiper/bundle';
     
